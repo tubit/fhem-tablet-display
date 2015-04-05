@@ -1,0 +1,3 @@
+[submodule "fhem-tablet-ui"]
+	path = fhem-tablet-ui
+	url = https://github.com/knowthelist/fhem-tablet-ui

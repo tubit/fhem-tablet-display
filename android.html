@@ -1,0 +1,117 @@
+<html>
+  <title>FHEM</title>
+  <head>
+    <!-- 
+    /* FHEM tablet ui */
+    /*
+    * Just another dashboard for FHEM
+    *
+    * Version: 1.3.0
+    * Requires: jQuery v1.7+, font-awesome, jquery.gridster, jquery.toast
+    * URL: https://github.com/knowthelist/fhem-tablet-ui
+    *
+    * Copyright (c) 2015 Mario Stephan <mstephan@shared-files.de>
+    * Under MIT License (http://www.opensource.org/licenses/mit-license.php)
+    *
+    * - create a new folder named 'tablet' in /<fhem-path>/www
+    * - copy all files incl. sub folders into /<fhem-path>/www/tablet
+    * - add 'define tablet_ui HTTPSRV tablet ./www/tablet Tablet Frontend' in fhem.cfg
+    * - Tadaaa! A new fhem ui in http://<fhem-url>:8083/fhem/tablet/
+    */
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="widget_base_width" content="116">
+    <meta name="widget_base_height" content="131">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="longpoll" content="1"> <!-- 1=longpoll;0=shortpoll every 30sec -->
+    <meta name="debug" content="0"> <!-- 1=output to console;0=not output -->
+
+    <link rel="stylesheet" href="/fhem/tablet/lib/jquery.gridster.min.css" />
+    <link rel="stylesheet" href="/fhem/tablet/css/fhem-tablet-ui.css" />
+    <link rel="stylesheet" href="/fhem/tablet/lib/font-awesome.min.css" />
+    <link rel="stylesheet" href="/fhem/tablet/lib/jquery.toast.min.css" />
+    <link rel="stylesheet" href="/fhem/tablet/lib/powerange.min.css" />
+
+
+    <script type="text/javascript" src="/fhem/pgm2/jquery.min.js"></script>
+    <script type="text/javascript" src="/fhem/tablet/lib/jquery.gridster.min.js"></script>
+    <script type="text/javascript" src="/fhem/pgm2/jquery.knob.min.js"></script>
+    <script type="text/javascript" src="/fhem/tablet/lib/jquery.toast.min.js"></script>
+    <script type="text/javascript" src="/fhem/tablet/lib/fa-multi-button.min.js"></script>
+    <script type="text/javascript" src="/fhem/tablet/lib/powerange.min.js"></script>
+    <script type="text/javascript" src="/fhem/tablet/js/fhem-tablet-ui.js"></script>
+
+    <!-- Enable this lines for usage with WebViewControl -->
+    <script type="text/javascript" src="/fhem/pgm2/cordova-2.3.0.js"></script>
+    <script type="text/javascript" src="/fhem/js/webviewcontrol.js"></script>
+    <script type="text/javascript">var wvcDevices = {'75882': 'odysTablet'}; var wvcUserCssFile="webviewcontrol.css"</script>
+    <!-- End for WebViewControl -->
+  </head>
+  <body>
+
+    <div class="gridster">
+      <ul>
+        <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+        <header>Wohnzimmer</header>
+        <div type="thermostat" device='wz_Thermostat_Climate' data-get="desired-temp" data-temp="measured-temp" class="cell left"></div>
+        <div type="label" device="wz_Thermostat_Climate" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
+        </li>
+        <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+        <header>Schlafzimmer</header>
+        <div type="thermostat" device="sz_Heizung1_Clima" data-get="desired-temp" data-temp="measured-temp" class="cell left"></div>
+        <div type="label" device="sz_Heizung1_Clima" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
+        </li>
+        <li data-row="1" data-col="3" data-sizex="2" data-sizey="1">
+        <header>Kinderzimmer</header>
+        <div type="thermostat" device="ki_Heizung1_Clima" data-get="desired-temp" data-temp="measured-temp" class="cell left"></div>
+        <div type="label" device="ki_Heizung1_Clima" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
+        </li>
+        <li data-row="2" data-col="1" data-sizex="3" data-sizey="3">
+        <header>Wohnzimmer</header>
+        <div class="container">
+          <div class="left">
+            <div type="switch" device="wz_couchlicht1" class="cell"></div>
+            <div type="label" class="cell">Couch</div>
+            <div type="switch" device="wz_spots1" class="cell"></div>
+            <div type="label" class="cell">Spots</div>
+            <div type="switch" device="wz_Stehlampe1" class="cell"></div>
+            <div type="label" class="cell">Stehlampe</div>
+          </div>
+          <div class="left">
+            <div type="switch" device="wz_LivingColor" class="cell"></div>
+            <div type="label" class="cell">Living Colors</div>
+            <div type="switch" device="ez_Stehlampe1" class="cell"></div>
+            <div type="label" class="cell">Esszimmer</div>
+          </div>
+          <div class="right">
+            <div type="shutter" device='wz_Rolladen_Fenster' data-get='pct' class="cell"></div>
+            <div type="label" class="cell">Rolladen Fenster</div>
+            <div type="shutter" device='wz_Rolladen_Tuer' data-get='pct' class="cell"></div>
+            <div type="label" class="cell">Rolladen Balkont&uuml;r</div>
+          </div>
+        </div>
+        </li>
+        <li data-row="2" data-col="4" data-sizex="2" data-sizey="3">
+        <header>K&uuml;che</header>
+        <div class="container">
+          <div type="shutter" device='ku_Rolladen' data-get='pct' class="cell"></div>
+          <div type="label" class="cell">Rolladen</div>
+          <div type="switch" device="ku_Taster1" class="cell"></div>
+          <div type="label" class="cell">LED Lampe</div>
+        </div>
+        </li>
+        <li data-row="2" data-col="6" data-sizex="1" data-sizey="3">
+        <header>Fenster / T&uuml;ren</header>
+        <div type="contact" device="wz_Balkontuer" class="cell"></div>
+        <div type="label" class="cell">Wohnzimmer Balkont&uuml;r</div>
+        <div type="contact" device="ku_Balkontuer" class="cell"></div>
+        <div type="label" class="cell">K&uuml;che Balkont&uuml;r</div>
+        <div type="contact" device="bad2_dachfenster" class="cell"></div>
+        <div type="label" class="cell">Badezimmer Dachfenster</div>
+        </li>
+
+      </ul>
+    </div> 
+  </body>
+</html>
