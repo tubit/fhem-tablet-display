@@ -73,13 +73,48 @@
         <header>Kinderzimmer</header>
         <div data-type="thermostat" data-device="ki_Heizung1_Clima" data-get="desired-temp" data-temp="measured-temp" data-valve="ValvePosition" class="cell left"></div>
         <div data-type="label" data-device="ki_Heizung1_Clima" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
+        <div data-type="label" data-device="ki_Thermo" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
         </li>
         <li data-row="1" data-col="8" data-sizex="1" data-sizey="1">
-        <header></header>
         </li>
         <li data-row="2" data-col="1" data-sizex="1" data-sizey="4">
+          <header>Wetter</header>
+          <div data-type="label" class="cellt">Heute</div>
+          <div data-type="weather"
+            data-device="MeinWetter"
+            data-get="condition"
+            class="cell big">
+          </div>
+          <div data-type="label"
+            data-device="MeinWetter"
+            data-get="condition">
+          </div>
+          <div data-type="label"
+            data-device="MeinWetter"
+            data-get="temperature"
+            data-limits="[-50,0,10,25,30,40]"
+            data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+            data-unit=" °C"></div>
+
+          <div data-type="label" class="cellt">Morgen</div>
+          <div data-type="weather"
+            data-device="MeinWetter"
+            data-get="fc2_condition"
+            class="cell big">
+          </div>
+          <div data-type="label"
+            data-device="MeinWetter"
+            data-get="fc2_condition">
+          </div>
+          <div data-type="label"
+            data-device="MeinWetter"
+            data-get="fc2_high_c"
+            data-limits="[-50,0,10,25,30,40]"
+            data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+            data-unit=" °C"></div>
+          </li>
         </li>
-        <li data-row="2" data-col="2" data-sizex="4" data-sizey="3">
+        <li data-row="2" data-col="2" data-sizex="4" data-sizey="2">
         <header>Wohnzimmer</header>
         <div class="container">
           <div class="left">
@@ -106,7 +141,7 @@
           </div>
         </div>
         </li>
-        <li data-row="2" data-col="6" data-sizex="2" data-sizey="3">
+        <li data-row="2" data-col="6" data-sizex="2" data-sizey="2">
         <header>K&uuml;che</header>
         <div class="container">
           <div data-type="volume" data-min='0' data-max='100' data-device='ku_Rolladen' data-get='pct' class="cell small"></div>
