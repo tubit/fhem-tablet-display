@@ -56,61 +56,61 @@
       <ul>
         <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
         <header>Wohnzimmer</header>
-        <div type="thermostat" device='wz_Thermostat_Climate' data-get="desired-temp" data-temp="measured-temp" class="cell left"></div>
-        <div type="label" device="wz_Thermostat_Climate" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
+        <div data-type="thermostat" data-device='wz_Thermostat_Climate' data-get="desired-temp" data-temp="measured-temp" class="cell left"></div>
+        <div data-type="label" data-device="wz_Thermostat_Climate" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
         </li>
         <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
         <header>Schlafzimmer</header>
-        <div type="thermostat" device="sz_Heizung1_Clima" data-get="desired-temp" data-temp="measured-temp" class="cell left"></div>
-        <div type="label" device="sz_Heizung1_Clima" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
+        <div data-type="thermostat" data-device="sz_Heizung1_Clima" data-get="desired-temp" data-temp="measured-temp" class="cell left"></div>
+        <div data-type="label" data-device="sz_Heizung1_Clima" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
         </li>
         <li data-row="1" data-col="3" data-sizex="2" data-sizey="1">
         <header>Kinderzimmer</header>
-        <div type="thermostat" device="ki_Heizung1_Clima" data-get="desired-temp" data-temp="measured-temp" class="cell left"></div>
-        <div type="label" device="ki_Heizung1_Clima" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
+        <div data-type="thermostat" data-device="ki_Heizung1_Clima" data-get="desired-temp" data-temp="measured-temp" class="cell left"></div>
+        <div data-type="label" data-device="ki_Heizung1_Clima" data-part="2" data-unit="%B0C%0A" class="cell big"></div>
         </li>
         <li data-row="2" data-col="1" data-sizex="3" data-sizey="3">
         <header>Wohnzimmer</header>
         <div class="container">
           <div class="left">
-            <div type="switch" device="wz_couchlicht1" class="cell"></div>
-            <div type="label" class="cell">Couch</div>
-            <div type="switch" device="wz_spots1" class="cell"></div>
-            <div type="label" class="cell">Spots</div>
-            <div type="switch" device="wz_Stehlampe1" class="cell"></div>
-            <div type="label" class="cell">Stehlampe</div>
+            <div data-type="switch" data-device="wz_couchlicht1" class="cell"></div>
+            <div data-type="label" class="cell">Couch</div>
+            <div data-type="switch" data-device="wz_spots1" class="cell"></div>
+            <div data-type="label" class="cell">Spots</div>
+            <div data-type="switch" data-device="wz_Stehlampe1" class="cell"></div>
+            <div data-type="label" class="cell">Stehlampe</div>
           </div>
           <div class="left">
-            <div type="switch" device="wz_LivingColor" class="cell"></div>
-            <div type="label" class="cell">Living Colors</div>
-            <div type="switch" device="ez_Stehlampe1" class="cell"></div>
-            <div type="label" class="cell">Esszimmer</div>
+            <div data-type="switch" data-device="wz_LivingColor" class="cell"></div>
+            <div data-type="label" class="cell">Living Colors</div>
+            <div data-type="switch" data-device="ez_Stehlampe1" class="cell"></div>
+            <div data-type="label" class="cell">Esszimmer</div>
           </div>
-          <div class="right">
-            <div type="shutter" device='wz_Rolladen_Fenster' data-get='pct' class="cell"></div>
-            <div type="label" class="cell">Rolladen Fenster</div>
-            <div type="shutter" device='wz_Rolladen_Tuer' data-get='pct' class="cell"></div>
-            <div type="label" class="cell">Rolladen Balkont&uuml;r</div>
+        <div class="right">
+            <div data-data-type="volume" data-min='0' data-max='100' data-data-device='wz_Rolladen_Fenster' data-get='pct' class="cell small"></div>
+            <div data-data-type="label" class="cell">Rolladen Fenster</div>
+            <div data-data-type="volume" data-min='0' data-max='100' data-data-device='wz_Rolladen_Tuer' data-get='pct' class="cell small"></div>
+            <div data-data-type="label" class="cell">Rolladen Balkont&uuml;r</div>
           </div>
         </div>
         </li>
         <li data-row="2" data-col="4" data-sizex="2" data-sizey="3">
         <header>K&uuml;che</header>
         <div class="container">
-          <div type="shutter" device='ku_Rolladen' data-get='pct' class="cell"></div>
-          <div type="label" class="cell">Rolladen</div>
-          <div type="switch" device="ku_Taster1" class="cell"></div>
-          <div type="label" class="cell">LED Lampe</div>
+          <div data-type="volume" data-min='0' data-max='100' data-device='ku_Rolladen' data-get='pct' class="cell small"></div>
+          <div data-type="label" class="cell">Rolladen</div>
+          <div data-type="switch" data-device="ku_Taster1" class="cell"></div>
+          <div data-type="label" class="cell">LED Lampe</div>
         </div>
         </li>
         <li data-row="2" data-col="6" data-sizex="1" data-sizey="3">
         <header>Fenster / T&uuml;ren</header>
-        <div type="contact" device="wz_Balkontuer" class="cell"></div>
-        <div type="label" class="cell">Wohnzimmer Balkont&uuml;r</div>
-        <div type="contact" device="ku_Balkontuer" class="cell"></div>
-        <div type="label" class="cell">K&uuml;che Balkont&uuml;r</div>
-        <div type="contact" device="bad2_dachfenster" class="cell"></div>
-        <div type="label" class="cell">Badezimmer Dachfenster</div>
+        <div data-type="contact" data-device="wz_Balkontuer" class="cell"></div>
+        <div data-type="label" class="cell">Wohnzimmer Balkont&uuml;r</div>
+        <div data-type="contact" data-device="ku_Balkontuer" class="cell"></div>
+        <div data-type="label" class="cell">K&uuml;che Balkont&uuml;r</div>
+        <div data-type="contact" data-device="bad2_dachfenster" class="cell"></div>
+        <div data-type="label" class="cell">Badezimmer Dachfenster</div>
         </li>
 
       </ul>
