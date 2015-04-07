@@ -24,6 +24,7 @@
     <meta name="widget_base_height" content="131">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="longpoll" content="1"> <!-- 1=longpoll;0=shortpoll every 30sec -->
     <meta name="debug" content="0"> <!-- 1=output to console;0=not output -->
 
@@ -33,13 +34,13 @@
     <link rel="stylesheet" href="/fhem/tablet/lib/jquery.toast.min.css" />
     <link rel="stylesheet" href="/fhem/tablet/lib/powerange.min.css" />
 
-
     <script type="text/javascript" src="/fhem/pgm2/jquery.min.js"></script>
-    <script type="text/javascript" src="/fhem/tablet/lib/jquery.gridster.min.js"></script>
-    <script type="text/javascript" src="/fhem/pgm2/jquery.knob.min.js"></script>
+    <script type="text/javascript" src="/fhem/tablet/lib/jquery.knob.mod.min.js"></script>
     <script type="text/javascript" src="/fhem/tablet/lib/jquery.toast.min.js"></script>
-    <script type="text/javascript" src="/fhem/tablet/lib/fa-multi-button.min.js"></script>
+    <script type="text/javascript" src="/fhem/tablet/lib/jquery.circlemenu.js"></script>
     <script type="text/javascript" src="/fhem/tablet/lib/powerange.min.js"></script>
+    <script type="text/javascript" src="/fhem/tablet/lib/jquery.gridster.min.js"></script>
+    <script type="text/javascript" src="/fhem/tablet/lib/fa-multi-button.min.js"></script>
     <script type="text/javascript" src="/fhem/tablet/js/fhem-tablet-ui.js"></script>
 
     <!-- Enable this lines for usage with WebViewControl --><!--
@@ -78,41 +79,41 @@
         <li data-row="1" data-col="8" data-sizex="1" data-sizey="1">
         </li>
         <li data-row="2" data-col="1" data-sizex="1" data-sizey="4">
-          <header>Wetter</header>
-          <div data-type="label" class="cell darker wider">Heute</div>
-          <div data-type="weather"
-            data-device="MeinWetter"
-            data-get="condition"
-            class="cell big">
-          </div>
-          <div data-type="label"
-            data-device="MeinWetter"
-            data-get="condition">
-          </div>
-          <div data-type="label"
-            data-device="MeinWetter"
-            data-get="temperature"
-            data-limits="[-50,0,10,25,30,40]"
-            data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
-            data-unit=" °C"></div>
+        <header>Wetter</header>
+        <div data-type="label" class="cell darker wider">Heute</div>
+        <div data-type="weather"
+          data-device="MeinWetter"
+          data-get="condition"
+          class="cell big">
+        </div>
+        <div data-type="label"
+          data-device="MeinWetter"
+          data-get="condition">
+        </div>
+        <div data-type="label"
+          data-device="MeinWetter"
+          data-get="temperature"
+          data-limits="[-50,0,10,25,30,40]"
+          data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+          data-unit=" °C"></div>
 
-          <div data-type="label" class="cell darker wider">Morgen</div>
-          <div data-type="weather"
-            data-device="MeinWetter"
-            data-get="fc2_condition"
-            class="cell big">
-          </div>
-          <div data-type="label"
-            data-device="MeinWetter"
-            data-get="fc2_condition">
-          </div>
-          <div data-type="label"
-            data-device="MeinWetter"
-            data-get="fc2_high_c"
-            data-limits="[-50,0,10,25,30,40]"
-            data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
-            data-unit=" °C"></div>
-          </li>
+        <div data-type="label" class="cell darker wider">Morgen</div>
+        <div data-type="weather"
+          data-device="MeinWetter"
+          data-get="fc2_condition"
+          class="cell big">
+        </div>
+        <div data-type="label"
+          data-device="MeinWetter"
+          data-get="fc2_condition">
+        </div>
+        <div data-type="label"
+          data-device="MeinWetter"
+          data-get="fc2_high_c"
+          data-limits="[-50,0,10,25,30,40]"
+          data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+          data-unit=" °C"></div>
+        </li>
         </li>
         <li data-row="2" data-col="2" data-sizex="4" data-sizey="3">
         <header>Wohnzimmer</header>
